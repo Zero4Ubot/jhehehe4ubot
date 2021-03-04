@@ -135,7 +135,7 @@ async def kang(args):
                 while "120" in x.text:
                     pack += 1
                     packname = f"a{user.id}_by_{user.id}_{pack}"
-                    packnick = f"@{user.id}'s kang pack Vol.{pack}"
+                    packnick = f"id:{user.id}'s kang pack Vol.{pack}"
                     await args.edit(
                         "`Beralih ke kumpulan curian "
                         + str(pack)
@@ -254,7 +254,7 @@ async def kang(args):
 
         await args.edit(
             f"`Sticker telah berhasil tercuri!`\
-            \nHasil curian ada disini [here](t.me/addstickers/{packname})",
+            \nKamu bisa melihat hasil curian[disini](t.me/addstickers/{packname})",
             parse_mode="md",
         )
 
