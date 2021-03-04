@@ -98,7 +98,7 @@ async def permitpm(event):
                     if BOTLOG:
                         await event.client.send_message(
                             BOTLOG_CHATID,
-                            "Count PM is seemingly going retard, plis restart bot!",
+                            "Penghitungan pesan spam terlalu berlebihan, tolong resta bot!",
                         )
                     LOGS.info("CountPM wen't rarted boi")
                     return
@@ -270,7 +270,7 @@ async def disapprovepm(disapprvpm):
         await disapprvpm.client.send_message(
             BOTLOG_CHATID,
             f"[{name0}](tg://user?id={disapprvpm.chat_id})"
-            " was disapproved to PM you.",
+            " sudah di acc kok :).",
         )
 
 
