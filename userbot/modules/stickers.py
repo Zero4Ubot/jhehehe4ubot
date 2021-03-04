@@ -102,8 +102,8 @@ async def kang(args):
                 # pack
                 emoji = splat[1]
 
-        packname = f"a{user.id}_by_{user.id}_{pack}"
-        packnick = f"@{user.id} hasil curian Vol.{pack}"
+        packname = f"a{user.id}_by_{user.username}_{pack}"
+        packnick = f"@{user.username} hasil curian Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
 
@@ -196,7 +196,7 @@ async def kang(args):
                 rsp = await conv.get_response()
                 if "Sorry, the file type is invalid." in rsp.text:
                     await args.edit(
-                        "`Failed to add sticker, use` @Stickers `bot to add the sticker manually.`"
+                        "`Gagal mencuri stiker ini, gunakan` @Stickers `bot untuk menambah stiker curian manual.`"
                     )
                     return
                 await conv.send_message(emoji)
@@ -227,7 +227,7 @@ async def kang(args):
                 rsp = await conv.get_response()
                 if "Sorry, the file type is invalid." in rsp.text:
                     await args.edit(
-                        "`Failed to add sticker, use` @Stickers `bot to add the sticker manually.`"
+                        "`Gagal mencuri stiker ini, gunakan` @Stickers `bot untuk menambah stiker curian manual.`"
                     )
                     return
                 await conv.send_message(emoji)
@@ -254,7 +254,7 @@ async def kang(args):
 
         await args.edit(
             f"`Sticker telah berhasil tercuri!`\
-            \nPack can be found [here](t.me/addstickers/{packname})",
+            \nHasil curian ada disini [here](t.me/addstickers/{packname})",
             parse_mode="md",
         )
 
