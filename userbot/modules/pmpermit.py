@@ -98,7 +98,7 @@ async def permitpm(event):
                     if BOTLOG:
                         await event.client.send_message(
                             BOTLOG_CHATID,
-                            "Penghitungan pesan spam terlalu berlebihan, tolong resta bot!",
+                            "Penghitungan pesan spam terlalu berlebihan, tolong restart bot!",
                         )
                     LOGS.info("CountPM wen't rarted boi")
                     return
@@ -164,7 +164,7 @@ async def auto_accept(event):
                 if is_approved(event.chat_id) and BOTLOG:
                     await event.client.send_message(
                         BOTLOG_CHATID,
-                        "#AUTO-APPROVED\n"
+                        "#OTOMATIS-DISETUJUI\n"
                         + "User: "
                         + f"[{chat.first_name}](tg://user?id={chat.id})",
                     )
@@ -302,7 +302,7 @@ async def blockpm(block):
     if BOTLOG:
         await block.client.send_message(
             BOTLOG_CHATID,
-            "#BLOCKED\n" + "User: " + f"[{name0}](tg://user?id={uid})",
+            "#TERBLOKIR!\n" + "User: " + f"[{name0}](tg://user?id={uid})",
         )
 
 
@@ -314,7 +314,7 @@ async def unblockpm(unblock):
         replied_user = await unblock.client.get_entity(reply.from_id)
         name0 = str(replied_user.first_name)
         await unblock.client(UnblockRequest(replied_user.id))
-        await unblock.edit("`You have been unblocked.`")
+        await unblock.edit("`Kamu trlah terblokir!.`")
 
     if BOTLOG:
         await unblock.client.send_message(
