@@ -30,7 +30,7 @@ KANGING_STR = [
     "Mencuri stiker ini hehehe...",
     "wah keren ni bro stikernya\nMinta yak..",
     "hehehe stikermu tercuri\nhehehe.",
-    "Buwung apa tu man→\nPencurian stiker dilakukan...",
+    "Buwung apa tu man (☉｡☉)→\nPencurian stiker dilakukan...",
     "Bismillahirrahmanirrahim ijin nyuri stiker ini",
     "Semoga halal hehehe...",
     "Alhamdulillah sudah tercuri, makasih bang... ",
@@ -41,8 +41,8 @@ KANGING_STR = [
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
     user = await bot.get_me()
-    if not user.zero4ubot:
-        user.zero4ubot = user.first_name
+    if not user.name:
+        user.name = user.first_name
     message = await args.get_reply_message()
     photo = None
     emojibypass = False
@@ -102,8 +102,8 @@ async def kang(args):
                 # pack
                 emoji = splat[1]
 
-        packname = f"a{user.zero4ubot}_{pack}"
-        packnick = f"@{user.zero4ubot}'s hasil curian Vol.{pack}"
+        packname = f"a{user.id}_by_{user.name}_{pack}"
+        packnick = f"@{user.name}'s hasil curian Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
 
@@ -355,7 +355,7 @@ async def sticker_to_png(sticker):
         try:
             await img.reply(file=image, force_document=True)
         except Exception:
-            await sticker.edit("`Error, can't send file...`")
+            await sticker.edit("`Gagal, tidak bisa mengirim file...`")
         else:
             await sticker.delete()
     return
