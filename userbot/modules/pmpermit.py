@@ -239,7 +239,7 @@ async def approvepm(apprvpm):
     if BOTLOG:
         await apprvpm.client.send_message(
             BOTLOG_CHATID,
-            "#APPROVED\n" + "User: " + f"[{name0}](tg://user?id={uid})",
+            "#DISETUJUI\n" + "User: " + f"[{name0}](tg://user?id={uid})",
         )
 
 
@@ -270,7 +270,7 @@ async def disapprovepm(disapprvpm):
         await disapprvpm.client.send_message(
             BOTLOG_CHATID,
             f"[{name0}](tg://user?id={disapprvpm.chat_id})"
-            " Sudah di acc kok :).",
+            " Tidak diizinkan mengirim pesan lagi!.",
         )
 
 
