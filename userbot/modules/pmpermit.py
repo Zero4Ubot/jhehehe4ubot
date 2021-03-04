@@ -86,8 +86,8 @@ async def permitpm(event):
 
             if COUNT_PM[event.chat_id] > 4:
                 await event.respond(
-                    "`You were spamming my PM, which I didn't like.`\n"
-                    "`I Wouldn't let you to chat me again until further notice`\n"
+                    "`Kamu telah melakukan spam yg tidak aku suka.`\n"
+                    "`Aku tidak mau melihatmu lagi disini!`\n"
                     "`Bye`"
                 )
 
@@ -116,7 +116,7 @@ async def permitpm(event):
                         + "](tg://user?id="
                         + str(event.chat_id)
                         + ")"
-                        + " was just another retarded nibba",
+                        + " orang goblok yg masih spam",
                     )
 
 
