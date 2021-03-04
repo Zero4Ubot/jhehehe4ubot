@@ -134,12 +134,12 @@ async def kang(args):
                 x = await conv.get_response()
                 while "120" in x.text:
                     pack += 1
-                    packname = f"a{user.id}_by_{user.username}_{pack}"
-                    packnick = f"@{user.username}'s kang pack Vol.{pack}"
+                    packname = f"a{user.id}_by_{user.id}_{pack}"
+                    packnick = f"@{user.id}'s kang pack Vol.{pack}"
                     await args.edit(
-                        "`Switching to Pack "
+                        "`Beralih ke kumpulan curian "
                         + str(pack)
-                        + " due to insufficient space`"
+                        + " Penyimpanan hasil curian penuh`"
                     )
                     await conv.send_message(packname)
                     x = await conv.get_response()
@@ -208,7 +208,7 @@ async def kang(args):
                 # Ensure user doesn't get spamming notifications
                 await bot.send_read_acknowledge(conv.chat_id)
         else:
-            await args.edit("`Membuat hasil curian baru...`")
+            await args.edit("`Memindahkan hasil curian baru...`")
             async with bot.conversation("Stickers") as conv:
                 await conv.send_message(cmd)
                 await conv.get_response()
