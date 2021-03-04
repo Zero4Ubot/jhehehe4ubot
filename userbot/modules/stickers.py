@@ -24,16 +24,16 @@ from userbot import CMD_HELP, bot
 from userbot.events import register
 
 KANGING_STR = [
-    "Using Witchery to kang this sticker...",
-    "Plagiarising hehe...",
-    "Inviting this sticker over to my pack...",
-    "Kanging this sticker...",
-    "Hey that's a nice sticker!\nMind if I kang?!..",
-    "hehe me stel ur stikér\nhehe.",
-    "Ay look over there (☉｡☉)!→\nWhile I kang this...",
-    "Roses are red violets are blue, kanging this sticker so my pacc looks cool",
-    "Imprisoning this sticker...",
-    "Mr.Steal Your Sticker is stealing this sticker... ",
+    "Bismillah ijin nyuri...",
+    "Ijin nyuri bang...",
+    "Menambah stiker curian...",
+    "Mencuri stiker ini hehehe...",
+    "wah keren ni bro stikernya\nMinta yak..",
+    "hehehe stikermu tercuri\nhehehe.",
+    "Buwung apa tu man→\nPencurian stiker dilakukan...",
+    "Bismillahirrahmanirrahim ijin nyuri stiker ini",
+    "Semoga halal hehehe...",
+    "Alhamdulillah sudah tercuri, makasih bang... ",
 ]
 
 
@@ -78,10 +78,10 @@ async def kang(args):
             is_anim = True
             photo = 1
         else:
-            await args.edit("`Unsupported File!`")
+            await args.edit("`File tidak mendukung!`")
             return
     else:
-        await args.edit("`I can't kang that...`")
+        await args.edit("`ngga bisa nyuri ini :(...`")
         return
 
     if photo:
@@ -102,8 +102,8 @@ async def kang(args):
                 # pack
                 emoji = splat[1]
 
-        packname = f"a{user.id}_by_{user.username}_{pack}"
-        packnick = f"@{user.username}'s kang pack Vol.{pack}"
+        packname = f"a{user.id}_by_{user.zero4ubot}_{pack}"
+        packnick = f"@{user.zero4ubot}'s hasil curian Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
 
