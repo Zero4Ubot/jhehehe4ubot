@@ -135,7 +135,7 @@ async def kang(args):
                 while "120" in x.text:
                     pack += 1
                     packname = f"a{user.id}_by_{user.id}_{pack}"
-                    packnick = f"id:{user.id}'s kang pack Vol.{pack}"
+                    packnick = f"id: {user.id}'s kang pack Vol.{pack}"
                     await args.edit(
                         "`Beralih ke kumpulan curian "
                         + str(pack)
