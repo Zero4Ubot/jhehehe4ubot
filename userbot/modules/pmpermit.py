@@ -231,10 +231,10 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        await apprvpm.edit("`User may already be approved.`")
+        await apprvpm.edit("`User ini sudah di acc.`")
         return
 
-    await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `approved to PM!`")
+    await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `Sudah di acc kok :)`")
 
     if BOTLOG:
         await apprvpm.client.send_message(
@@ -270,7 +270,7 @@ async def disapprovepm(disapprvpm):
         await disapprvpm.client.send_message(
             BOTLOG_CHATID,
             f"[{name0}](tg://user?id={disapprvpm.chat_id})"
-            " sudah di acc kok :).",
+            " Sudah di acc kok :).",
         )
 
 
