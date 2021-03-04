@@ -1,7 +1,7 @@
 {
-  "name": "Telegram One 4u Bot",
-  "description": "[One4uBot] A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.",
-  "logo": "https://i.ibb.co/CzXcJ0S/photo-2020-01-28-23-32-03.jpg",
+  "name": "Telegram jhehehe4ubot",
+  "description": "[jhehehe4ubot] A modular Telegram userbot running on Python 3.8+ with an sqlalchemy database.",
+  "logo": "https://i.ibb.co/zNQd4Rm/20210304-121245.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/MoveAngel/One4uBot",
+  "repository": "https://github.com/Zero4Ubot/jhehehe4ubot",
   "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
   "success_url": "https://t.me/userbotindo",
   "stack": "container",
@@ -166,7 +166,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default profile bio.",
-      "value": "[PM = Report Spam] I ❤ ️One4uBot",
+      "value": "[PM = Report Spam] I ❤ ️jhehehe4ubot",
       "required": false
     },
     "ALIVE_NAME": {
