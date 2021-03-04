@@ -41,8 +41,8 @@ KANGING_STR = [
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
     user = await bot.get_me()
-    if not user.name:
-        user.name = user.first_name
+    if not user.username:
+        user.username = user.first_name
     message = await args.get_reply_message()
     photo = None
     emojibypass = False
