@@ -1,4 +1,4 @@
-# One4uBot userbot project
+# Jhehehe4ubot userbot project
 
 <p align="center">
     <a href="https://github.com/MoveAngel/One4ubot/actions?query=workflow%3AFailedChecker" > <img src="https://img.shields.io/github/workflow/status/MoveAngel/One4uBot/FailedChecker/sql-extended?label=Build&style=flat-square&logo=github-actions&logoColor=white&color=98CE00" alt="FailedChecker" /></a>
@@ -12,7 +12,7 @@
     <a href="https://t.me/userbotindo"> <img src="https://img.shields.io/badge/telegram-Support_Group-blue?style=social&logo=telegram" alt="Support" /></a>
 </p>
 
-![logo](https://i.ibb.co/SmQhdCF/wendywalters-20200604-0001.jpg)
+![logo](ttps://i.ibb.co/bJm3XBv/jhehehe.jpg)
 
 ```
 #include <std/disclaimer.h>
