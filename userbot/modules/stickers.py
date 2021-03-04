@@ -103,7 +103,7 @@ async def kang(args):
                 emoji = splat[1]
 
         packname = f"a{user.id}_by_{user.id}_{pack}"
-        packnick = f"@{user.username}'s hasil curian Vol.{pack}"
+        packnick = f"@{user.id} hasil curian Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
 
