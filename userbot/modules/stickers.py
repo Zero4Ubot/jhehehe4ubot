@@ -103,7 +103,7 @@ async def kang(args):
                 emoji = splat[1]
 
         packname = f"a{user.id}_by_{user.id}_{pack}"
-        packnick = f"id:{user.id} hasil curian Vol.{pack}"
+        packnick = f"@{user.username} hasil curian Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
 
@@ -181,9 +181,9 @@ async def kang(args):
                         # Ensure user doesn't get spamming notifications
                         await bot.send_read_acknowledge(conv.chat_id)
                         await args.edit(
-                            f"`Sticker added in a Different Pack !\
-                            \nThis Pack is Newly created!\
-                            \nYour pack can be found [here](t.me/addstickers/{packname})",
+                            f"`Hasil curi stiker ditambah ke tempat berbeda!\
+                            \nIni baru saja dibuat!\
+                            \nKamu bisa melihat hasil curian [disini](t.me/addstickers/{packname})",
                             parse_mode="md",
                         )
                         return
