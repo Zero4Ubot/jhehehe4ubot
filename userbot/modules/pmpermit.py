@@ -24,9 +24,9 @@ from userbot.events import register
 # ========================= CONSTANTS ============================
 DEF_UNAPPROVED_MSG = (
     "Hoi! yg punya akun lagi ngga bisa baca/balas pesanmu sekarang.\n"
-    "Tolong tunggu sampai yg punya akun inget kalo punya telegram untuk membacanya.\n"
-    "Tolong jangan spam disini!...\n"
-    "Jika tetap spam anda akan otomatis terblok oleh userbot yg punya akun!.\n\n"
+    "Tolong tunggu sampai yg punya akun inget kalo dia punya telegram untuk membacanya.\n"
+    "Tolong jangan spam disini!\n"
+    "Jika tetap spam anda akan otomatis terblok oleh userbot!\n\n"
     "*Ini pesan otomatis dari userbot."
 )
 # =================================================================
@@ -100,7 +100,7 @@ async def permitpm(event):
                             BOTLOG_CHATID,
                             "Penghitungan pesan spam terlalu berlebihan, tolong restart bot!",
                         )
-                    LOGS.info("CountPM wen't rarted boi")
+                    LOGS.info("Spam pesan terdeteksi")
                     return
 
                 await event.client(BlockRequest(event.chat_id))
