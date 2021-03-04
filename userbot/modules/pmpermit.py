@@ -23,11 +23,11 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 DEF_UNAPPROVED_MSG = (
-    "Hey! Sorry, I haven't approved you to PM yet.\n"
-    "Please wait for me to look in.\n"
-    "Until then, please don't spam my PM...\n"
-    "Thank you for being patient.\n\n"
-    "*This is an automated message."
+    "Hoi! yg punya akun lagi ngga bisa baca/balas pesanmu sekarang.\n"
+    "Tolong tunggu sampai yg punya akun inget kalo punya telegram untuk membacanya.\n"
+    "Tolong jangan spam disini!...\n"
+    "Jika tetap spam anda akan otomatis terblok oleh userbot yg punya akun!.\n\n"
+    "*Ini pesan otomatis dari userbot."
 )
 # =================================================================
 
