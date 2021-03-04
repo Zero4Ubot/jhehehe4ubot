@@ -99,7 +99,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
 
         if BOTLOG:
             await event.client.send_message(
-                BOTLOG_CHATID, "#UPDATE \n" "jhehehe4ubot telah sukses diperbaharui"
+                BOTLOG_CHATID, "#MEMPERBARUI \n" "jhehehe4ubot telah sukses diperbaharui"
             )
 
     else:
@@ -119,7 +119,7 @@ async def update(event, repo, ups_rem, ac_br):
 
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#UPDATE \n" "jhehehe4ubot telah sukses diperbaharui"
+            BOTLOG_CHATID, "#MEMPERBARUI \n" "jhehehe4ubot telah sukses diperbaharui"
         )
 
     # Spin a new instance of bot
@@ -162,7 +162,7 @@ async def upstream(event):
     ac_br = repo.active_branch.name
     if ac_br != UPSTREAM_REPO_BRANCH:
         await event.edit(
-            "**[UPDATER]:**\n"
+            "**[PEMBARUAN]:**\n"
             f"`Looks like you are using your own custom branch ({ac_br}). "
             "in that case, Updater is unable to identify "
             "which branch is to be merged. "
@@ -187,19 +187,19 @@ async def upstream(event):
 
     if conf is None and force_update is False:
         changelog_str = (
-            f"**New UPDATE available for [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`"
+            f"**Update terbaru tersedia untuk [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`"
         )
         if len(changelog_str) > 4096:
             await event.edit("`Changelog is too big, view the file to see it.`")
-            file = open("output.txt", "w+")
+            file = open("changelog.txt", "w+")
             file.write(changelog_str)
             file.close()
             await event.client.send_file(
                 event.chat_id,
-                "output.txt",
+                "changelog.txt",
                 reply_to=event.id,
             )
-            remove("output.txt")
+            remove("changelog.txt")
         else:
             await event.edit(changelog_str)
         return await event.respond('`do ".update now/deploy" to update`')
@@ -209,7 +209,7 @@ async def upstream(event):
             "`Force-Syncing to latest stable userbot code, please wait...`"
         )
     else:
-        await event.edit("`Updating One4uBot, please wait....`")
+        await event.edit("`Memperbarui jhehehe4ubot, mohon bersabar....`")
     if conf == "now":
         await update(event, repo, ups_rem, ac_br)
     elif conf == "deploy":
