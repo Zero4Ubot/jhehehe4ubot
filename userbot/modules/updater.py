@@ -114,7 +114,7 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await event.edit(
-        "`Berhasil meng-update!\n" "Bot dimuat ulang... Tunggu sebentar!`"
+        "`Berhasil memperbarui!\n" "Bot dimuat ulang... Tunggu sebentar!`"
     )
 
     if BOTLOG:
@@ -181,7 +181,7 @@ async def upstream(event):
 
     if changelog == "" and force_update is False:
         await event.edit(
-            f"\n`{UPDATER_ALIAS} is`  **up-to-date**  `with`  **{UPSTREAM_REPO_BRANCH}**\n"
+            f"\n`{UPDATER_ALIAS} is`  **terbaru**  `dengan`  **{UPSTREAM_REPO_BRANCH}**\n"
         )
         return repo.__del__()
 
