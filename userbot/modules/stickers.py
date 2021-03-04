@@ -102,8 +102,8 @@ async def kang(args):
                 # pack
                 emoji = splat[1]
 
-        packname = f"a{user.id}_by_{user.username}_{pack}"
-        packnick = f"@{user.username} hasil curian Vol.{pack}"
+        packname = f"a{user.id}_by_{user.id}_{pack}"
+        packnick = f"id:{user.id} hasil curian Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
 
@@ -299,11 +299,11 @@ async def get_pack_info(event):
         stickerset_attr = rep_msg.document.attributes[1]
         await event.edit("`Fetching details of the sticker pack, please wait..`")
     except BaseException:
-        await event.edit("`This is not a sticker. Reply to a sticker.`")
+        await event.edit("`Ini bukan stiker. Balas ke sebuah stiker`")
         return
 
     if not isinstance(stickerset_attr, DocumentAttributeSticker):
-        await event.edit("`This is not a sticker. Reply to a sticker.`")
+        await event.edit("`This is not a sticker. Balas ke sebuah stiker.`")
         return
 
     get_stickerset = await bot(
@@ -339,13 +339,13 @@ async def sticker_to_png(sticker):
 
     img = await sticker.get_reply_message()
     if not img.document:
-        await sticker.edit("`Reply to a sticker...`")
+        await sticker.edit("`Balas ke sebuah stiker...`")
         return False
 
     try:
         img.document.attributes[1]
     except Exception:
-        await sticker.edit("`This is not a sticker...`")
+        await sticker.edit("`Ini bukan stiker...`")
         return
 
     with io.BytesIO() as image:
