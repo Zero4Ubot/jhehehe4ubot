@@ -65,8 +65,8 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         heroku_applications = heroku.apps()
         if HEROKU_APP_NAME is None:
             await event.edit(
-                "`Please set up HEROKU_APP_NAME variable"
-                " to be able to deploy newest changes of userbot.`"
+                "`Tolong isi HEROKU_APP_NAME variable"
+                " untuk mengizinkan update terbaru userbot.`"
             )
             repo.__del__()
             return
@@ -76,10 +76,10 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 break
         if heroku_app is None:
             await event.edit(
-                f"{txt}\n`Invalid Heroku credentials for deploying userbot dyno.`"
+                f"{txt}\n`Kesalahan Heroku credentials untuk deploying userbot dyno.`"
             )
             return repo.__del__()
-        await event.edit("`Userbot dyno build in progress, please wait...`")
+        await event.edit("`Sedang dalam proses update userbot dyno, mohon bersabar...`")
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
         heroku_git_url = heroku_app.git_url.replace(
@@ -95,15 +95,15 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         except GitCommandError as error:
             await event.edit(f"{txt}\n`Here is the error log:\n{error}`")
             return repo.__del__()
-        await event.edit("`Successfully Updated!\n" "Restarting, please wait...`")
+        await event.edit("`Berhasil meng-update userbot!\n" "Memuat ulang, mohon bersabar...`")
 
         if BOTLOG:
             await event.client.send_message(
-                BOTLOG_CHATID, "#UPDATE \n" "Your One4uBot was successfully updated"
+                BOTLOG_CHATID, "#UPDATE \n" "jhehehe4ubot telah sukses diperbaharui"
             )
 
     else:
-        await event.edit("`Please set up HEROKU_API_KEY variable.`")
+        await event.edit("`Tolong isi HEROKU_API_KEY variable.`")
     return
 
 
@@ -114,12 +114,12 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await event.edit(
-        "`Successfully Updated!\n" "Bot is restarting... Wait for a second!`"
+        "`Berhasil meng-update!\n" "Bot dimuat ulang... Tunggu sebentar!`"
     )
 
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#UPDATE \n" "Your One4uBot was successfully updated"
+            BOTLOG_CHATID, "#UPDATE \n" "jhehehe4ubot telah sukses diperbaharui"
         )
 
     # Spin a new instance of bot
@@ -136,8 +136,8 @@ async def upstream(event):
     off_repo = UPSTREAM_REPO_URL
     force_update = False
     try:
-        txt = "`Oops.. Updater cannot continue due to "
-        txt += "some problems occured`\n\n**LOGTRACE:**\n"
+        txt = "`Hamdehh.. Updater tidak bisa melanjutkan karena "
+        txt += "beberapa masalah`\n\n**LOGTRACE:**\n"
         repo = Repo()
     except NoSuchPathError as error:
         await event.edit(f"{txt}\n`directory {error} is not found`")
