@@ -41,8 +41,8 @@ KANGING_STR = [
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
     user = await bot.get_me()
-    if not user.username:
-        user.username = user.first_name
+    if not user.zero4ubot:
+        user.zero4ubot = user.first_name
     message = await args.get_reply_message()
     photo = None
     emojibypass = False
@@ -102,7 +102,7 @@ async def kang(args):
                 # pack
                 emoji = splat[1]
 
-        packname = f"a{user.id}_by_{user.zero4ubot}_{pack}"
+        packname = f"a{user.zero4ubot}_{pack}"
         packnick = f"@{user.zero4ubot}'s hasil curian Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
