@@ -34,8 +34,8 @@ DEF_UNAPPROVED_MSG = (
 
 @register(incoming=True, disable_edited=True, disable_errors=True)
 async def permitpm(event):
-    """ Prohibits people from PMing you without approval. \
-        Will block retarded nibbas automatically. """
+    """ Untuk orang yg mengirim pesan tanpa persetujuan. \
+        Akan otomatis memblokir orang goblok itu. """
     if not PM_AUTO_BAN:
         return
     self_user = await event.client.get_me()
