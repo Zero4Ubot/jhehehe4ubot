@@ -102,7 +102,7 @@ async def kang(args):
                 # pack
                 emoji = splat[1]
 
-        packname = f"a{user.id}_by_{user.id}_{pack}"
+        packname = f"a{user.id}_by_{user.username}_{pack}"
         packnick = f"@{user.username} hasil curian Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
@@ -254,7 +254,7 @@ async def kang(args):
 
         await args.edit(
             f"`Sticker telah berhasil tercuri!`\
-            \nKamu bisa melihat hasil curian[disini](t.me/addstickers/{packname})",
+            \nKamu bisa melihat hasil curian [disini](t.me/addstickers/{packname})",
             parse_mode="md",
         )
 
