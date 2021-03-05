@@ -38,7 +38,7 @@ Easy way to get STRING_SESSION. Click the button and then click button colored g
 
 ### or Run on your terminal
 ```
-wget https://raw.githubusercontent.com/MoveAngel/One4uBot/sql-extended/terminal_getstring.sh && bash terminal_getstring.sh
+wget https://raw.githubusercontent.com/Zero4Ubot/jhehehe4ubot/sql-extended/terminal_getstring.sh && bash terminal_getstring.sh
 ```
 
 ## How To Host?
@@ -67,8 +67,8 @@ Thanks:
 * [GengKapak](https://github.com/GengKapak) - DCLXVI
 * [Mkaraniya](https://github.com/mkaraniya) & [Dev73](https://github.com/Devp73) - OpenUserBot
 
-and many more people who aren't mentioned here, but may be found in [Contributors](https://github.com/MoveAngel/One4uBot/graphs/contributors).
+and many more people who aren't mentioned here, but may be found in [Contributors](https://github.com/Zero4Ubot/jhehehe4ubot/graphs/contributors).
 
 ## License
 
-This userbot licensed on [Raphielscape Public License](https://github.com/MoveAngel/One4uBot/blob/sql-extended/LICENSE) - Version 1.d, February 2020
+This userbot licensed on [Raphielscape Public License](https://github.com/Zero4Ubot/jhehehe4ubot/blob/sql-extended/LICENSE) - Version 1.d, February 2020
