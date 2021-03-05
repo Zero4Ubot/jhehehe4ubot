@@ -82,12 +82,12 @@ async def set_afk(afk_e):
         AFKREASON = string
         await afk_e.edit(
             f"Sedang Offline\
-        \nReason: `{string}`"
+        \nAlasan: `{string}`"
         )
     else:
         await afk_e.edit("Sedang Offline")
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nYou went AFK!")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#OFFLINE\nKamu sedang offline")
     ISAFK = True
     afk_time = datetime.now()  # pylint:disable=E0602
     raise StopPropagation
@@ -114,11 +114,11 @@ async def type_afk_is_not_true(notafk):
         if BOTLOG:
             await notafk.client.send_message(
                 BOTLOG_CHATID,
-                "Yang kamu teri6 "
+                "Yang kamu terima "
                 + str(COUNT_MSG)
                 + " Pesan dari "
                 + str(len(USERS))
-                + " chats while you were away",
+                + " ketika kamu offline",
             )
             for i in USERS:
                 if str(i).isnumeric():
@@ -127,7 +127,7 @@ async def type_afk_is_not_true(notafk):
                     await notafk.client.send_message(
                         BOTLOG_CHATID,
                         "[" + name0 + "](tg://user?id=" + str(i) + ")" +
-                        " sent you " + "`" + str(USERS[i]) + " message(s)`",
+                        " mengirim kamu " + "`" + str(USERS[i]) + " pesan(s)`",
                     )
                 else:  # anon admin
                     await notafk.client.send_message(
@@ -152,7 +152,7 @@ async def mention_afk(mention):
     global afk_end
     back_alivee = datetime.now()
     afk_end = back_alivee.replace(microsecond=0)
-    afk_since = "a while ago"
+    afk_since = "beberapa waktu lalu"
     if ISAFK and mention.message.mentioned:
             now = datetime.now()
             datime_since_afk = now - afk_time  # pylint:disable=E0602
@@ -176,11 +176,11 @@ async def mention_afk(mention):
                     wday = now + datetime.timedelta(days=-days)
                     afk_since = wday.strftime("%A")
             elif hours > 1:
-                afk_since = f"`{int(hours)}h{int(minutes)}m` ago"
+                afk_since = f"`{int(hours)}h{int(minutes)}m` yang lalu"
             elif minutes > 0:
-                afk_since = f"`{int(minutes)}m{int(seconds)}s` ago"
+                afk_since = f"`{int(minutes)}m{int(seconds)}s` yang lalu"
             else:
-                afk_since = f"`{int(seconds)}s` ago"
+                afk_since = f"`{int(seconds)}s` yang lalu"
             
             is_bot = False
             if (sender := await mention.get_sender()):
@@ -233,7 +233,7 @@ async def afk_on_pm(sender):
     global afk_end
     back_alivee = datetime.now()
     afk_end = back_alivee.replace(microsecond=0)
-    afk_since = "beberapa saat lalu"
+    afk_since = "beberapa waktu lalu"
     if (
         sender.is_private
         and sender.sender_id != 777000
@@ -275,7 +275,7 @@ async def afk_on_pm(sender):
             elif minutes > 0:
                 afk_since = f"`{int(minutes)}m{int(seconds)}s` yang lalu"
             else:
-                afk_since = f"`{int(seconds)}s` ago"
+                afk_since = f"`{int(seconds)}s` yang lalu"
             if sender.sender_id not in USERS:
                 if AFKREASON:
                     await sender.reply(
