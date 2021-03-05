@@ -233,12 +233,12 @@ async def amireallyalive(alive):
         "`⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊶⊷⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶`\n"
         f"•  ⚙️ `Telethon       : v{version.__version__} `\n"
         f"•  🐍 `Python         : v{python_version()} `\n"
-        f"•  👤 `User           :`  {DEFAULTUSER} \n"
+        f"•  👤 `Pengguna           :`  {DEFAULTUSER} \n"
         "`----------------------------------`\n"
-        f"•  💻 `Running on     : {repo.active_branch.name} `\n"
-        f"•  🗃 `Loaded modules : {len(modules)} `\n"
-        f"•  🧸 `One4uBot       : v{USERBOT_VERSION} `\n"
-        f"•  🕒 `Bot Uptime     : {uptime} `\n"
+        f"•  💻 `Berjalan pada     : {repo.active_branch.name} `\n"
+        f"•  🗃 `Module dimuat : {len(modules)} `\n"
+        f"•  🦅 `jhehehe4ubot       : v{USERBOT_VERSION} `\n"
+        f"•  🕒 `Waktu aktif bot     : {uptime} `\n"
         "`⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊶⊷⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶`"
     )
     if ALIVE_LOGO:
