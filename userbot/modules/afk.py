@@ -176,11 +176,11 @@ async def mention_afk(mention):
                     wday = now + datetime.timedelta(days=-days)
                     afk_since = wday.strftime("%A")
             elif hours > 1:
-                afk_since = f"`{int(hours)}h{int(minutes)}m` yang lalu"
+                afk_since = f"`{int(hours)}jam{int(minutes)}menit` yang lalu"
             elif minutes > 0:
-                afk_since = f"`{int(minutes)}m{int(seconds)}s` yang lalu"
+                afk_since = f"`{int(minutes)}menit{int(seconds)}detik` yang lalu"
             else:
-                afk_since = f"`{int(seconds)}s` yang lalu"
+                afk_since = f"`{int(seconds)}detik` yang lalu"
             
             is_bot = False
             if (sender := await mention.get_sender()):
@@ -271,11 +271,11 @@ async def afk_on_pm(sender):
                     wday = now + datetime.timedelta(days=-days)
                     afk_since = wday.strftime("%A")
             elif hours > 1:
-                afk_since = f"`{int(hours)}h{int(minutes)}m` yang lalu"
+                afk_since = f"`{int(hours)}jam{int(minutes)}menit` yang lalu"
             elif minutes > 0:
-                afk_since = f"`{int(minutes)}m{int(seconds)}s` yang lalu"
+                afk_since = f"`{int(minutes)}menit{int(seconds)}detik` yang lalu"
             else:
-                afk_since = f"`{int(seconds)}s` yang lalu"
+                afk_since = f"`{int(seconds)}detik` yang lalu"
             if sender.sender_id not in USERS:
                 if AFKREASON:
                     await sender.reply(
