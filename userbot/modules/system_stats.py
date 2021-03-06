@@ -235,10 +235,10 @@ async def amireallyalive(alive):
         f"•  🐍 `Python         : v{python_version()} `\n"
         f"•  👤 `Pengguna       :`  {DEFAULTUSER} \n"
         "`----------------------------------`\n"
-        f"•  💻 `Berjalan pada     : {repo.active_branch.name} `\n"
-        f"•  🗃 `Module dimuat     : {len(modules)} `\n"
-        f"•  🦅 `jhehehe4ubot      : v{USERBOT_VERSION} `\n"
-        f"•  🕒 `Waktu aktif bot   : {uptime} `\n"
+        f"•  💻 `Berjalan pada  : {repo.active_branch.name} `\n"
+        f"•  🗃 `Module dimuat  : {len(modules)} `\n"
+        f"•  🦅 `jhehehe4ubot   : v{USERBOT_VERSION} `\n"
+        f"•  🕒 `Waktu aktif    : {uptime} `\n"
         "`⊷⊷⊷⊷⊷⊷⊷⊷⊷⊷⊶⊷⊶⊶⊶⊶⊶⊶⊶⊶⊶⊶`"
     )
     if ALIVE_LOGO:
