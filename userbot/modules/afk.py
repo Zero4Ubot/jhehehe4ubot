@@ -82,7 +82,7 @@ async def set_afk(afk_e):
         AFKREASON = string
         await afk_e.edit(
             f"Sedang Offline\
-        \nAlasan: `{string}`"
+        \nKarena: `{string}`"
         )
     else:
         await afk_e.edit("Sedang Offline")
@@ -127,13 +127,13 @@ async def type_afk_is_not_true(notafk):
                     await notafk.client.send_message(
                         BOTLOG_CHATID,
                         "[" + name0 + "](tg://user?id=" + str(i) + ")" +
-                        " mengirim kamu " + "`" + str(USERS[i]) + " pesan(s)`",
+                        " mengirim kamu " + "`" + str(USERS[i]) + "pesan`",
                     )
                 else:  # anon admin
                     await notafk.client.send_message(
                         BOTLOG_CHATID,
-                        "Anonymous admin in `" + i + "` sent you " + "`" +
-                        str(USERS[i]) + " message(s)`",
+                        "Admin grup `" + i + "` mengirim kamu " + "`" +
+                        str(USERS[i]) + "pesan`",
                     )
         COUNT_MSG = 0
         USERS = {}
@@ -176,11 +176,11 @@ async def mention_afk(mention):
                     wday = now + datetime.timedelta(days=-days)
                     afk_since = wday.strftime("%A")
             elif hours > 1:
-                afk_since = f"`{int(hours)}jam{int(minutes)}menit` yang lalu"
+                afk_since = f"`{int(hours)} jam{int(minutes)} menit` yang lalu"
             elif minutes > 0:
-                afk_since = f"`{int(minutes)}menit{int(seconds)}detik` yang lalu"
+                afk_since = f"`{int(minutes)} menit{int(seconds)} detik` yang lalu"
             else:
-                afk_since = f"`{int(seconds)}detik` yang lalu"
+                afk_since = f"`{int(seconds)} detik` yang lalu"
             
             is_bot = False
             if (sender := await mention.get_sender()):
@@ -194,7 +194,7 @@ async def mention_afk(mention):
                 if AFKREASON:
                     await mention.reply(
                         f"Aku offline sejak {afk_since}.\
-                        \nAlasan: `{AFKREASON}`"
+                        \nKarena: `{AFKREASON}`"
                     )
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -207,7 +207,7 @@ async def mention_afk(mention):
                     if AFKREASON:
                         await mention.reply(
                             f"Aku tetep offline sejak {afk_since}.\
-                            \nAlasan: `{AFKREASON}`"
+                            \nKarena: `{AFKREASON}`"
                         )
                     else:
                         await mention.reply(str(choice(AFKSTR)))
@@ -271,16 +271,16 @@ async def afk_on_pm(sender):
                     wday = now + datetime.timedelta(days=-days)
                     afk_since = wday.strftime("%A")
             elif hours > 1:
-                afk_since = f"`{int(hours)}jam{int(minutes)}menit` yang lalu"
+                afk_since = f"`{int(hours)} jam{int(minutes)} menit` yang lalu"
             elif minutes > 0:
-                afk_since = f"`{int(minutes)}menit{int(seconds)}detik` yang lalu"
+                afk_since = f"`{int(minutes)} menit{int(seconds)} detik` yang lalu"
             else:
-                afk_since = f"`{int(seconds)}detik` yang lalu"
+                afk_since = f"`{int(seconds)} detik` yang lalu"
             if sender.sender_id not in USERS:
                 if AFKREASON:
                     await sender.reply(
                         f"Aku offline sejak {afk_since}.\
-                        \nAlasan: `{AFKREASON}`"
+                        \nKarena: `{AFKREASON}`"
                     )
                 else:
                     await sender.reply(str(choice(AFKSTR)))
@@ -291,7 +291,7 @@ async def afk_on_pm(sender):
                     if AFKREASON:
                         await sender.reply(
                             f"Aku tetap offline sejak {afk_since}.\
-                            \nAlasan: `{AFKREASON}`"
+                            \nKarena: `{AFKREASON}`"
                         )
                     else:
                         await sender.reply(str(choice(AFKSTR)))
