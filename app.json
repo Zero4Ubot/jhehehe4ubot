@@ -166,7 +166,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default profile bio.",
-      "value": "[PM = Report Spam] I ❤ ️jhehehe4ubot",
+      "value": "jhehehe4ubot",
       "required": false
     },
     "ALIVE_NAME": {
